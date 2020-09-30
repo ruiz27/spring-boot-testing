@@ -11,6 +11,10 @@ public class MyController2 {
 
 	private final MyService service;
 
+	public MyController2(MyService service) {
+		this.service = service;
+	}
+
 	@RequestMapping("/greeting")
 	public @ResponseBody String greeting() {
 		return service.greet();
